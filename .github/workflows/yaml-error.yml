@@ -1,0 +1,6 @@
+name: YAML error
+on: push
+  run:
+    runs-on: ubuntu-latest
+      steps: # インデントがズレている
+      - run: date

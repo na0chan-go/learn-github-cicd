@@ -4,9 +4,9 @@ env:
   EXAMPLE: Defined by workflow level # ワークフローレベルで環境変数を定義
 jobs:
   print:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - run: echo "${EXAMPLE}" # ワークフローレベルの環境変数を参照
       - env:
-          EXAMPLE: Defined by job level # ステップレベルで環境変数をオーバーライド
+          EXAMPLE: Defined by step level # ステップレベルで環境変数をオーバーライド
         run: echo "${EXAMPLE}" # オーバーライドされた環境変数を出力

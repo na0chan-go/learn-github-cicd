@@ -1,0 +1,12 @@
+name: Override environment variables
+on: push
+env:
+  EXAMPLE: Defined by workflow level # ワークフローレベルで環境変数を定義
+jobs:
+  print:
+    runs-on: ubuntu-lates
+    steps:
+      - run: echo "${EXAMPLE}" # ワークフローレベルの環境変数を参照
+      - env:
+          EXAMPLE: Defined by job level # ステップレベルで環境変数をオーバーライド
+        run: echo "${EXAMPLE}" # オーバーライドされた環境変数を出力

@@ -3,7 +3,7 @@ on: push
 jobs:
   upload:
     runs-on: ubuntu-latest
-    stesp:
+    steps:
       - run: date > date.txt # アーティファクトの生成
       - uses: actions/upload-artifact@v4 # アーティファクトのアップロード
         with:

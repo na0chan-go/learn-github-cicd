@@ -11,7 +11,7 @@ env:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissons:
+    permissions:
       packages: write # GitHub Packagesへの書き込みを許可
       contents: read # ソースコードのチェックアウトを許可
     steps:
